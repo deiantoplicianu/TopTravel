@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=6F:8F:74:77:7F:24:6F:A9:34:35:CD:5A:EB:53:52:6B:9C:B4:AF:4F%3Bcom.codepalace.chatbot.ui
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.codepalace.chatbot.ui
+
+    SHA-1 certificate fingerprint:
+    6F:8F:74:77:7F:24:6F:A9:34:35:CD:5A:EB:53:52:6B:9C:B4:AF:4F
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDFb_aW6i4PsiXUFHSDkKgu3LK7HDne9jQ</string>
+</resources>

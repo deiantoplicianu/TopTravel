@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainBot">
+
+
+    <LinearLayout
+        android:id="@+id/ll_layout_bar"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-105dp"
+        android:background="#E4E4E4"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight=".5"
+            android:background="@drawable/round_button"
+            android:backgroundTint="@android:color/white"
+            android:hint="Type a message..."
+            android:inputType="textShortMessage"
+            android:padding="10dp"
+            android:singleLine="true" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btn_send"-->
+        <!--            android:layout_width="400dp"-->
+        <!--            android:layout_height="53dp"-->
+        <!--            android:layout_margin="10dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@drawable/round_button"-->
+        <!--            android:backgroundTint="#000000"-->
+        <!--            android:text="Send"-->
+        <!--            android:textColor="@android:color/white" />-->
+
+        <ImageView
+
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="151dp"
+            android:src="@drawable/ic_baseline_send_24"
+            app:tint="#003300" />
+
+        <ImageView
+
+            android:id="@+id/btnSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="151dp"
+            android:src="@drawable/ic_baseline_mic_24"
+            app:tint="#003300" />
+
+        <ImageView
+
+            android:id="@+id/icCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="151dp"
+            android:src="@drawable/ic_calendar"
+            app:tint="#003300" />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_layout_bar"
+        android:layout_below="@+id/dark_divider"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="-7dp"
+        tools:itemCount="20"
+        tools:listitem="@layout/message_item" />
+
+    <View
+        android:id="@+id/dark_divider"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#FFFFFF" />
+
+
+
+</RelativeLayout>
