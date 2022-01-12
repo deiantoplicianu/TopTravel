@@ -12,27 +12,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.codepalace.chatbot.R
 import com.codepalace.chatbot.data.Message
+import com.codepalace.chatbot.databinding.ActivityMainBinding
 import com.codepalace.chatbot.utils.BotResponse
-import com.codepalace.chatbot.utils.Constants.OPEN_CALENDAR
 import com.codepalace.chatbot.utils.Constants.OPEN_CITY
 import com.codepalace.chatbot.utils.Constants.RECEIVE_ID
 import com.codepalace.chatbot.utils.Constants.SEND_ID
 import com.codepalace.chatbot.utils.Time
-import com.google.android.material.datepicker.MaterialDatePicker
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.start.*
 import kotlinx.coroutines.*
-import java.text.SimpleDateFormat
-import com.codepalace.chatbot.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.start2.*
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 import java.nio.charset.Charset
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
-
 import java.util.*
 
 class MainBot : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
@@ -82,8 +75,6 @@ class MainBot : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
 
     fun getIataCode(aeroport : String) {
 
-        val usersList: ArrayList<UserModelClass> = ArrayList()
-
         try {
 
             val obj = JSONObject(getJSONFromAssets()!!)
@@ -102,19 +93,12 @@ class MainBot : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
 
             }
         } catch (e: JSONException) {
-            //exception
             e.printStackTrace()
         }
-
-        //et_message.setText("$iataaeroport")
 
 
     }
 
-
-    /**
-     * Method to load the JSON from the Assets file and return the object
-     */
     private fun getJSONFromAssets(): String? {
 
         var json: String? = null
@@ -132,12 +116,6 @@ class MainBot : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
         }
         return json
     }
-
-
-    //=====
-
-
-
 
     private fun getSpeechInput() {
         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
@@ -299,11 +277,7 @@ class MainBot : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
                         val mainDepArr = date2
                         val mainPers = BotResponse.persNumber
 
-
                         val mainDays = ok
-
-
-
                         val site = Intent(Intent.ACTION_VIEW)
 
                         site.data =

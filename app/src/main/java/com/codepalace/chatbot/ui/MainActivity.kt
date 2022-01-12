@@ -1,19 +1,10 @@
 package com.codepalace.chatbot.ui
 
 import android.content.Intent
-import android.os.Build.VERSION_CODES.O
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
 import com.codepalace.chatbot.R
-import com.codepalace.chatbot.ui.GetIata
 import kotlinx.android.synthetic.main.start.*
-import kotlinx.android.synthetic.main.start2.*
-import org.json.JSONException
-import org.json.JSONObject
-import java.io.IOException
-import java.io.InputStream
-import java.nio.charset.Charset
 
 class MainActivity : AppCompatActivity() {
 

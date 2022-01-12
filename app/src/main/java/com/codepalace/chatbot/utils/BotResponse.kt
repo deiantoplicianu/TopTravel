@@ -1,46 +1,13 @@
 package com.codepalace.chatbot.utils
 
-import android.app.DatePickerDialog
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.codepalace.chatbot.R
-import android.content.Intent
-import android.os.Build.VERSION_CODES.O
-import android.widget.DatePicker
-import androidx.core.content.ContextCompat.startActivity
-import com.codepalace.chatbot.ui.GetIata
-import com.codepalace.chatbot.ui.MainBot
-import com.codepalace.chatbot.ui.UserModelClass
-import com.codepalace.chatbot.utils.Constants.OPEN_CALENDAR
 import com.codepalace.chatbot.utils.Constants.OPEN_CITY
-import com.codepalace.chatbot.utils.Constants.OPEN_GOOGLE
-import com.codepalace.chatbot.utils.Constants.OPEN_SEARCH
-import com.google.android.material.datepicker.MaterialDatePicker
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.start.*
-import org.json.JSONArray
-import org.json.JSONException
-import org.json.JSONObject
-import java.io.IOException
-import java.io.InputStream
-import java.nio.charset.Charset
-import java.sql.Date
-import java.sql.Timestamp
-import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.time.temporal.ChronoUnit
-import java.util.*
 
 object BotResponse : AppCompatActivity(){
 
     var iataDep: String = ""
     var iataArr: String = ""
-    var dateDeparture: String = ""
-    var dateArrival: String = ""
-    var daysNumber: String = ""
     var persNumber: String = ""
-    var arrLatitude: String = ""
-    var arrLong: String = ""
 
 
     fun basicResponses(_message: String): String {
