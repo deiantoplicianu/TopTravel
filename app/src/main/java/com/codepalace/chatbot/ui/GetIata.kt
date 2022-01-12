@@ -16,7 +16,6 @@ class GetIata : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.start2)
 
         val usersList: ArrayList<UserModelClass> = ArrayList()
 
@@ -39,41 +38,20 @@ class GetIata : AppCompatActivity() {
                 if(user.getString("city") == "Barcelona")
                     iataaeroport = user.getString("iata")
 
-
-
-
-                // create a object for getting phone numbers data from JSONObject
-//                val phone = user.getJSONObject("phone")
-//                // fetch mobile number
-//                val mobile = phone.getString("mobile")
-//                // fetch office number
-//                val office = phone.getString("office")
-
-                //Now add all the variables to the data model class and the data model class to the array list.
                 val userDetails =
                     UserModelClass(id, name, city, country, iata, icao, lattitude)
-
-                //add the details in the list
                 usersList.add(userDetails)
             }
         } catch (e: JSONException) {
-            //exception
             e.printStackTrace()
         }
 
-        // Set the LayoutManager that this RecyclerView will use.
         rvUsersList.layoutManager = LinearLayoutManager(this)
-        // Adapter class is initialized and list is passed in the param.
         val itemAdapter = UserAdapter(this, usersList)
-        // adapter instance is set to the recyclerview to inflate the items.
         rvUsersList.adapter = itemAdapter
 
     }
 
-
-    /**
-     * Method to load the JSON from the Assets file and return the object
-     */
     private fun getJSONFromAssets(): String? {
 
         var json: String? = null

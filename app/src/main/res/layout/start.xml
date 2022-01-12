@@ -27,12 +27,4 @@
         android:layout_marginTop="231dp"
         android:text="ChatBot" />
 
-    <Button
-        android:id="@+id/mapBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="242dp"
-        android:text="MAPA" />
 </RelativeLayout>

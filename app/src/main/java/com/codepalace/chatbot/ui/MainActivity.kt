@@ -28,14 +28,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-
-        mapBtn.setOnClickListener{
-            val intent = Intent(this, MapsActivity::class.java)
-            startActivity(intent)
-
-        }
-
-
     }
 
 }

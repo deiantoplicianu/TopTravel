@@ -39,8 +39,6 @@ class MainBot : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
 
     private lateinit var binding: ActivityMainBinding
 
-
-
     var messagesList = mutableListOf<Message>()
 
     var day = 0
@@ -78,9 +76,6 @@ class MainBot : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
     }
 
 
-
-    //=====
-
     var iataaeroport: String = ""
     var iatalatid:String = ""
     var iatalong:String = ""
@@ -97,13 +92,6 @@ class MainBot : AppCompatActivity(), DatePickerDialog.OnDateSetListener{
             for (i in 0 until usersArray.length()) {
 
                 val user = usersArray.getJSONObject(i)
-//                val id = user.getString("id")
-//                val name = user.getString("name")
-//                val city = user.getString("city")
-//                val country = user.getString("country")
-//                val iata = user.getString("iata")
-//                val icao = user.getString("icao")
-//                val lattitude = user.getString("latitude")
 
                 if(user.getString("city") == aeroport) {
                     iataaeroport = user.getString("iata")
